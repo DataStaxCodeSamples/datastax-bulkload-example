@@ -27,7 +27,7 @@ To run the bulk loader, this defaults to 1 million rows.
 To run it other settings for no of rows, jmx host and port
 
 	mvn clean compile exec:java -Dexec.mainClass="com.datastax.bulkloader.Main"  -DnoOfRows=5000000 -Djmxhost=cassandra1 -Djmxport=7191    
-	
+		
 To remove the tables and the schema, run the following.
 
     mvn clean compile exec:java -Dexec.mainClass="com.datastax.demo.SchemaTeardown"

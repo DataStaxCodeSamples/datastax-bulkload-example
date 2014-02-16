@@ -47,7 +47,7 @@ public class BulkLoadTransactions {
 		 * Create a composite column with the types for each part
 		 * 
 		 * Each column will have the types in order of the table creation
-		 * command In this case we have an int then a varchar(UTF8 is the
+		 * command In this case we have an timestamp then a varchar(UTF8 is the
 		 * underlying type) Use the type mapping here:
 		 * http://www.datastax.com/docs/1.2/cql_cli/cql_data_types
 		 */
@@ -58,7 +58,7 @@ public class BulkLoadTransactions {
 
 		testWriter = new SSTableSimpleUnsortedWriter(filePath,
 				new Murmur3Partitioner(), keyspace, tableName,
-				compositeColumn, null, 64);
+				compositeColumn, null, 128);
 	}
 	
 	public File getFilePath(){
