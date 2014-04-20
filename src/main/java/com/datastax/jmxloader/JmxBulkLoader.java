@@ -14,6 +14,7 @@ import javax.management.remote.JMXConnectorFactory;
 import javax.management.remote.JMXServiceURL;
 
 import org.apache.cassandra.service.StorageServiceMBean;
+
 import com.datastax.demo.utils.Timer;
 
 public class JmxBulkLoader {
